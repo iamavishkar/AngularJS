@@ -1,0 +1,19 @@
+<div class="py-5 my-5 container-fluid">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card shadow-5 border-1 rounded bg-white">
+                <div class="card-header text-center bg-white">
+                    <img ng-src="{{banner_img}}" alt="banner" class="rounded" width="250" />
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li ng-repeat="list in list"><a ng-href="{{list.href}}">{{list.title}}</a></li>
+                    </ul>
+                </div>
+                <div class="footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
