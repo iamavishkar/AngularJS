@@ -9,6 +9,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-4">
+                            <span class="text-danger" ng-if="error != undefined">{{error}}</span>
                             <form>
                                 <div class="form-group mt-2">
                                     <label for="name">Full Name:</label>
@@ -40,7 +41,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="list in list">
+                                    <tr ng-repeat="list in listTable">
                                         <td>{{$index+1}}</td>
                                         <td>{{list.name}}</td>
                                         <td>{{list.email}}</td>
@@ -52,7 +53,6 @@
                     </div>
                 </div>
                 <div class="footer">
-
                 </div>
             </div>
         </div>
