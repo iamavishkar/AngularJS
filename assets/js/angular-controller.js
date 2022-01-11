@@ -25,7 +25,7 @@ app.config(function ($routeProvider, $locationProvider) {
 //main controller
 app.controller("mainController", function ($rootScope, $scope) {
     $rootScope.pageTitle = "Home";
-    $scope.banner_img = "assets/img/angularjs-banner.jpg";
+    $scope.banner_img = "https://docs.angularjs.org/img/angularjs-for-header-only.svg";
     $scope.list = [
         { title: "Dynamic Table with Form", href: "table" },
         { title: "Get IFSC details by API", href: "api" }
