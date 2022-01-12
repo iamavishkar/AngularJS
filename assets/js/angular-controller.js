@@ -73,6 +73,7 @@ app.controller("apiController", function ($rootScope, $scope, $http) {
             $http.get(url + $scope.ifsc)
                 .then(function (response) {
                     $scope.listApi = response.data;
+                    $scope.error = "";
                 }, function (error) {
                     $scope.error = "Invalid IFSC Code";
                 });
