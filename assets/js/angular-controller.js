@@ -18,10 +18,6 @@ app.config(function ($routeProvider, $locationProvider) {
             templateUrl: "/views/api.html",
             controller: "apiController"
         });
-<<<<<<< HEAD
-    $locationProvider.html5Mode(true);
-=======
->>>>>>> 0a1be495c04cfbfca429b08533830f5910df804d
 });
 
 ////  Controllers starts  ////
@@ -77,10 +73,6 @@ app.controller("apiController", function ($rootScope, $scope, $http) {
             $http.get(url + $scope.ifsc)
                 .then(function (response) {
                     $scope.listApi = response.data;
-<<<<<<< HEAD
-=======
-                    $scope.error = "";
->>>>>>> 0a1be495c04cfbfca429b08533830f5910df804d
                 }, function (error) {
                     $scope.error = "Invalid IFSC Code";
                 });
