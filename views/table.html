@@ -31,9 +31,13 @@
                             </form>
                         </div>
                         <div class="col-md-7 offset-md-1">
+                            <div class="form-group mt-2 mb-2">
+                                <label for="term">Enter search term:</label>
+                                <input type="text" name="term" id="term" ng-model="term" class="form-control" />
+                            </div>
                             <table class="table table-bordered w-100 table-sm">
                                 <thead class="bg-light">
-                                    <tr>
+                                    <tr class="text-bold">
                                         <th>#</th>
                                         <th>Name</th>
                                         <th>Email</th>
@@ -41,7 +45,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="list in listTable">
+                                    <tr ng-repeat="list in listTable | filter:term">
                                         <td>{{$index+1}}</td>
                                         <td>{{list.name}}</td>
                                         <td>{{list.email}}</td>

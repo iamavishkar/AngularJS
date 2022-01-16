@@ -4,6 +4,7 @@ var app = angular.module("app", ["ngRoute"]);
 //routing
 app.config(function ($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix('');
+    $locationProvider.html5Mode(true);
     $routeProvider
         .when("/", {
             templateUrl: "/views/main.html",
@@ -17,7 +18,10 @@ app.config(function ($routeProvider, $locationProvider) {
             templateUrl: "/views/api.html",
             controller: "apiController"
         });
+<<<<<<< HEAD
     $locationProvider.html5Mode(true);
+=======
+>>>>>>> 0a1be495c04cfbfca429b08533830f5910df804d
 });
 
 ////  Controllers starts  ////
@@ -25,7 +29,7 @@ app.config(function ($routeProvider, $locationProvider) {
 //main controller
 app.controller("mainController", function ($rootScope, $scope) {
     $rootScope.pageTitle = "Home";
-    $scope.banner_img = "assets/img/angularjs-banner.jpg";
+    $scope.banner_img = "https://docs.angularjs.org/img/angularjs-for-header-only.svg";
     $scope.list = [
         { title: "Dynamic Table with Form", href: "table" },
         { title: "Get IFSC details by API", href: "api" }
@@ -73,6 +77,10 @@ app.controller("apiController", function ($rootScope, $scope, $http) {
             $http.get(url + $scope.ifsc)
                 .then(function (response) {
                     $scope.listApi = response.data;
+<<<<<<< HEAD
+=======
+                    $scope.error = "";
+>>>>>>> 0a1be495c04cfbfca429b08533830f5910df804d
                 }, function (error) {
                     $scope.error = "Invalid IFSC Code";
                 });
